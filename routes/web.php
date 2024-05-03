@@ -7,7 +7,7 @@ use App\Http\Controllers\TagController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('/layouts/app');
+    return view('welcome');
 });
 
 // Articles

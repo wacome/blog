@@ -3,7 +3,9 @@
     "type": "module",
     "scripts": {
         "dev": "vite",
-        "build": "vite build"
+        "build": "vite build",
+        "build-css": "tailwindcss build resources/css/app.css -o public/css/app.css",
+        "watch-css": "tailwindcss -i resources/css/app.css -o public/css/app.css --watch"
     },
     "devDependencies": {
         "axios": "^1.6.4",
