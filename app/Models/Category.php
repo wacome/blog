@@ -14,6 +14,8 @@ class Category extends Model
         'name',
     ];
 
+    public $timestamps = false;
+
     public function articles(): BelongsToMany
     {
         return $this->belongsToMany(Article::class);
@@ -22,5 +24,11 @@ class Category extends Model
     public function getSlugAttribute()
     {
         return Str::slug($this->name);
+    }
+
+    public function setNameAttribute($value)
+    {
+        $this->attributes['name'] = $value;
+        $this->attributes['slug'] = Str::slug($value);
     }
 }

@@ -13,6 +13,8 @@ class Archive extends Model
         'name',
     ];
 
+    public $timestamps = false;
+
     public function articles(): BelongsToMany
     {
         return $this->belongsToMany(Article::class);
