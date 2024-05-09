@@ -22,3 +22,35 @@
 .dropdown-content {
     width: 130px !important;
 }
+.card {
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(8px);
+}
+.nav {
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(8px);
+}
+.nav-item {
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(7px);
+}
+.custom-height {
+    height: calc(100vh - 64px); /* 减去导航栏的高度，假设为64px */
+}
+.card {
+    margin-top: -150px;
+}
+.nav-text {
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(8px);
+}
+.article-card {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.article-card.show {
+    opacity: 1;
+    transform: translateY(0);
+}

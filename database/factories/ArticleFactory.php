@@ -20,6 +20,7 @@ class ArticleFactory extends Factory
             'title' => $this->faker->sentence,
             'content' => $this->faker->paragraph,
             'published_at' => now(),
+            'article_img' => $this->faker->image(width: 1920, height: 1080),
         ];
     }
 }

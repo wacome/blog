@@ -1,5 +1,5 @@
 <div x-data="{ isOpen: false }" @mouseover="isOpen = true" @mouseleave="isOpen = false" class="relative inline-block text-left">
-    <button id="dropdownButton" @click="isOpen = !isOpen" class="bg-white px-4 py-2 rounded-full shadow-md text-gray-700 font-semibold" x-ref="button">
+    <button id="dropdownButton" @click="isOpen = !isOpen" class="bg-white px-4 py-2 rounded-full shadow-md text-gray-700 font-semibold nav-item" x-ref="button">
         @if($url)
             <a href="{{ $url }}" class="text-gray-700 hover:text-gray-900">
                 {{ $label }}
@@ -17,7 +17,7 @@
          x-transition:leave-end="opacity-0 transform scale-90" x-cloak>
         @foreach ($content as $item)
             @if(isset($item['title']) && isset($item['link']))
-            <a href="{{ $item['link'] }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 text-center">{{ $item['title'] }}</a>
+            <a href="{{ $item['link'] }}" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100 text-center nav-text">{{ $item['title'] }}</a>
             @endif
         @endforeach
     </div>

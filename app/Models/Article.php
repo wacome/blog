@@ -19,6 +19,7 @@ class Article extends Model
         'is_reprinted',
         'original_author',
         'original_source',
+        'article_img',
     ];
 
     protected $dates = [
@@ -34,17 +35,17 @@ class Article extends Model
 
     public function tags(): BelongsToMany
     {
-        return $this->belongsToMany(Tag::class);
+        return $this->belongsToMany(Tag::class, 'article_tag_pivot');
     }
 
     public function categories(): BelongsToMany
     {
-        return $this->belongsToMany(Category::class);
+        return $this->belongsToMany(Category::class, 'article_category_pivot');
     }
 
     public function archives(): BelongsToMany
     {
-        return $this->belongsToMany(Archive::class);
+        return $this->belongsToMany(Archive::class, 'article_archive_pivot');
     }
 
     public function author()
