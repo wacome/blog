@@ -54,3 +54,10 @@
     opacity: 1;
     transform: translateY(0);
 }
+.backdrop-blur {
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(10px);
+}
+.word-vertical {
+    writing-mode: vertical-rl;
+}

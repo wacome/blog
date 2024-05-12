@@ -45,3 +45,14 @@ Route::get('/archives/{archive}', [ArchiveController::class, 'show'])->name('arc
 Route::get('/archives/{archive}/edit', [ArchiveController::class, 'edit'])->name('archives.edit');
 Route::put('/archives/{archive}', [ArchiveController::class, 'update'])->name('archives.update');
 Route::delete('/archives/{archive}', [ArchiveController::class, 'destroy'])->name('archives.destroy');
+
+// ovodmin
+Route::view('/ovodmin', 'dashboard')
+    ->middleware(['auth', 'verified'])
+    ->name('dashboard');
+
+Route::view('profile', 'profile')
+    ->middleware(['auth'])
+    ->name('profile');
+
+require __DIR__.'/auth.php';
